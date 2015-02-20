@@ -1,0 +1,1 @@
+You need ECMA6 generator support to use this library.
