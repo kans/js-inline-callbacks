@@ -1,0 +1,31 @@
+{
+  "name": "js-inline-callbacks",
+  "main": "./lib/inline_callbacks",
+  "version": "0.0.1",
+  "description": "A simple library for unwinding ECMA6 generators",
+  "maintainers": [
+    {
+      "name": "Matt Kaniaris",
+      "web": "https://github.com/kans"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Matt Kaniaris",
+      "web": "https://github.com/kans"
+    }
+  ],
+  "repository": "https://github.com/kans/js-inline-callbacks",
+  "license": "Apache 2.0",
+  "engines": {
+    "iojs": ">1.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "nodeunit": "0.9.x"
+  },
+  "scripts": {
+    "test": "./bin/test"
+  }
+}
