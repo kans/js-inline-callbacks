@@ -1,8 +1,27 @@
-You need ECMA6 generator support (iojs) to use this library.
+Fun with inlining javascript seagulls using ECMA6 generator support (iojs) to use this library.
 
 Example Usage:
 
 ```javascript
+// Avoid the flock of seagulls
+function (a) {
+  setTimeout(function () {
+    setTimeout(function () {
+      console.log("the thing I want");
+    });
+  });
+}
+
+// Avoid async primitives
+async.series([
+  function (cb) {
+    setTimeout(function () {return cb()}, 0);
+  },
+  function (cb) {
+    setTimeout(function () {return cb()}, 0);
+  },
+], function (err) {});
+
 function* a (ret) {
   yield 1;
   console.log(ret[0])
