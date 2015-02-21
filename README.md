@@ -17,8 +17,11 @@ function* a (ret) {
 };
 
 // yield calls are made sequentially, after their callbacks have fired
-> require("inline_callbacks").inline(a);
+> require("inline_callbacks").inline(a, function (ret) {
+  console.log("finished", ret);
+});
 // 1
 // 2
 // 3
+// finished 3
 ```
