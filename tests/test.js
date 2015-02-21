@@ -30,3 +30,19 @@ exports.testReturnByReference = function(test){
   test.expect(2);
   inline(a)
 };
+
+exports.testCB = function(test){
+  let yeilded = 1;
+  function* a (ret) {
+    yield function (cb) {
+      setTimeout(function () {return cb(yeilded)}, 0);
+    }
+  };
+
+  test.expect(1);
+
+  inline(a, function (ret) {
+    test.equals(ret, yeilded, "this assertion should pass");
+    test.done();   
+  });
+};
