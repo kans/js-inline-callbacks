@@ -1,5 +1,4 @@
-Fun with inlining javascript seagulls using ECMA6 generator support (iojs) to use this library.
-
+This librayr provides the ability to inline async javascript callbacks using ECMA6 generators.
 
 A flock of seagulls:
 ```javascript
