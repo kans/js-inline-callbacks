@@ -1,9 +1,8 @@
 Fun with inlining javascript seagulls using ECMA6 generator support (iojs) to use this library.
 
-Example Usage:
 
+A flock of seagulls:
 ```javascript
-// Avoid the flock of seagulls
 function (a) {
   setTimeout(function () {
     setTimeout(function () {
@@ -11,8 +10,10 @@ function (a) {
     });
   });
 }
+``` 
 
-// Avoid async primitives
+Using Async:
+```javascript
 async.series([
   function (cb) {
     setTimeout(function () {return cb()}, 0);
@@ -21,7 +22,10 @@ async.series([
     setTimeout(function () {return cb()}, 0);
   },
 ], function (err) {});
+```
 
+Inlined:
+```javascript
 function* a (ret) {
   yield 1;
   console.log(ret[0])
