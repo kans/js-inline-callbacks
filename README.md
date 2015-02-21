@@ -1,4 +1,4 @@
-This librayr provides the ability to inline async javascript callbacks using ECMA6 generators.
+This library provides the ability to inline async javascript callbacks using ECMA6 generators.
 
 A flock of seagulls:
 ```javascript
